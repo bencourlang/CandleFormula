@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ----------- Scroll Reveal Library ----------- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="../resources/img/logo.png" class="logo">
+            <!--<a href="#" class="logo">Portf<span>olio.</span></a>-->
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="../views/home.html" class="nav-link">Calculator</a>
+                    </li>
+                    <li>
+                        <a href="../views/howTo.html" class="nav-link">How to</a>
+                    </li>
+                    <li>
+                        <a href="../views/fragrance.html" class="nav-link">Fragrances</a>
+                    </li>
+                    <li>
+                        <a href="../views/supplies.html" class="nav-link">Supplies</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="soyPara section">
+            <h1 class="heading">Soy vs Paraffin</h1>
+            <div class="container">
+                <div class="soyPara-grid">
+                    <div class="soyPara-card">
+                        <div class="card-desc">
+                            <h3 class="sub-heading">Soy Wax</h3>
+                            <p class="text">
+                                Soy wax is made from soybean oil. It can contain other non soy materials such as other animal or plant based 
+                                products. Soy wax is better for the environment and is a renewable resource.
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Buy Now</a>
+                    </div>
+                    <div class="soyPara-card">
+                        <div class="card-desc">
+                            <h3 class="sub-heading">Paraffin Wax</h3>
+                            <p class="text">
+                                Paraffin wax is made out of petroleum made from crude oil. Crude oil is a fossil fuel and is not renewable.
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Buy Now</a>
+                    </div>
+                    <div class="soyPara-card">
+                        <div class="card-desc">
+                            <h3>Scent</h3>
+                            <p class="text">
+                                Soy wax is more dense than paraffin wax meaning it has to burn hotter to release the fragrance. This can lead to paraffin wax releasing scent faster
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Explore More</a>
+                    </div>
+                    <div class="soyPara-card">
+                        <div class="card-desc">
+                            <h3>Burn time</h3>
+                            <p class="text">
+                                Since soy wax is denser and requires more heat to burn it can have a longer burn time than paraffin wax. 
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Explore More</a>
+                    </div>
+                    <img src="../resources/img/square1.png" alt="" class="shape square">
+                </div>
+                <div class="soyPara-info">
+                    <label for="cups">Cups:</label>
+                    <input type="number" id="cups" name="cups" value="" onkeyup="calcFragrance()"><br>
+
+                    <label for="fragStr">Fragrance Strength:</label>
+                    <input type="range" id="fragStr" name="fragStr" value="7" min="5" max="10" onkeyup="calcFragrance()"><br>
+                    <div class="range-value" id="rangeV"></div>
+
+                    <div class="showFragranceNums" id="showFragranceNums"></div>
+                    <!-- cups -> oz -> 7% industry standard -> slider 5%-10% -->
+                </div>
+            </div>
+        </section>
+
+        <section class="services section">
+            <h1 class="heading">Popular Scents</h1>
+            <div class="container">
+                <div class="services-grid">
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>Cinnamon</h3>
+                            <img src="../resources/img/cinnamon.jpg">
+                            <p class="text">
+                                goes well with apple, sugar, pumpkin
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Buy Now</a>
+                    </div>
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>Apple</h3>
+                            <img src="../resources/img/apple.png.webp">
+                            <p class="text">
+                                goes well with cinnamon, currant, harvest, autumn
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Buy Now</a>
+                    </div>
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>Lavender</h3>
+                            <img src="../resources/img/lavender.webp">
+                            <p class="text">
+                                goes well with mint, sage, patchouli, sandalwood, rosemary, clean linen
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Buy Now</a>
+                    </div>
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>Jasmine</h3>
+                            <img src="../resources/img/jasmine.jpg">
+                            <p class="text">
+                                goes well with rose, ocean mist, sea breeze, rain water, clean linen, citrus
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section">
+            <div class="container">
+                <div class="skills-box">
+                    <h1 class="heading">Mission Statement</h1>
+                    <p class="text">
+                        Our goal is to help candle making at home simpler by providing a place for all your candle making needs. 
+                        We want to help DIYers and small businesses find all their needed supplies and to make your calculations easier.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ----------- js files ----------- -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../resources/js/candleFormula.js"></script>
+</body>
